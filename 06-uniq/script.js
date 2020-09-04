@@ -10,11 +10,11 @@
 function uniq(arr) {
     // Напишите код здесь
     let newArr = new Array();
-    arr.map(x => {
-        if(!newArr.includes(x)) {
-            newArr.push(x);
+    arr.forEach(element => {
+        if(!newArr.includes(element)) {
+            newArr.push(element);
         }
-    })
+    });
     return newArr;
 }
 
