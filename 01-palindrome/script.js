@@ -13,20 +13,14 @@
  * 
 */
 
-let reversedStr = "";
+
 
 function palindrome(str) {
     // Напишите код здесь
-    reversedStr = str.split("").reverse().join("").toLowerCase();
-    reversedStr = reversedStr.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s+]/g,"");
-
-    if(reversedStr == str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s+]/g,""))
-    {
-        return true;
-    }
-    else {
-        return false;
-    }
+    let reversedStr = "";
+    str = str.replace(/[^A-Za-zА-Яа-я]/g).toLowerCase();
+    reversedStr = str.split("").reverse().join("");
+    return str === reversedStr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

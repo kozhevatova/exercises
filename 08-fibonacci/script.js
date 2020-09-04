@@ -17,8 +17,7 @@ function fibonacci(n) {
             fibArr[i + 2] = fibArr[i] + fibArr[i + 1];
         }
         return (fibArr[n - 1]);
-    }
-    else {
+    } else {
         return fibArr[0];
     }
 }

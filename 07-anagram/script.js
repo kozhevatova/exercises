@@ -19,11 +19,10 @@ function anagram(str1, str2) {
             str1arr.splice(str1arr.indexOf(element),1);
         }
     });
-    if(str1arr.length == 0 && str2arr.length == 0 && 
-        str1.toLowerCase() != str2.toLowerCase()) {
+    if(str1arr.length === 0 && str2arr.length === 0 && 
+        str1.toLowerCase() !== str2.toLowerCase()) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 }

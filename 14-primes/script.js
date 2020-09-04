@@ -8,6 +8,16 @@
 
 function primes(num) {
     // Напишите код здесь
+    let primeNums = new Array();
+    firstForCycle: for(let i = 2; i <= num; i++) {
+        for(let j = 2; j < i; j++) {
+            if(i%j === 0) {
+                continue firstForCycle;
+            }
+        }
+        primeNums.push(i);
+    }
+    return primeNums;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
