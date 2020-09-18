@@ -9,13 +9,16 @@
 
 function intersection(arr1, arr2) {
   // Напишите код здесь
-  const newArr = [];
-  arr1.forEach((element) => {
-    if (arr2.includes(element) && !newArr.includes(element)) {
-      newArr.push(element);
+  const set = new Set();
+  
+  arr1.filter((element) => {
+    if(arr2.includes(element)) {
+      set.add(element);
+      return element;
     }
   });
-  return newArr;
+
+  return [...set];
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

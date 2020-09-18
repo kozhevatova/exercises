@@ -8,10 +8,9 @@
  * последовательности Фибоначчи.
 */
 
-const fibArr = [0, 1];
-
 function fibonacci(n) {
   // Напишите код здесь
+  const fibArr = [0, 1];
   if (n > 0) {
     for (let i = 0; i <= n - 2; i++) {
       fibArr[i + 2] = fibArr[i] + fibArr[i + 1];
