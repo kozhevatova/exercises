@@ -4,18 +4,18 @@
  * Напишите функцию uniq(arr), принимающую на вход массив целых чисел.
  * Функция должна возвращать массив уникальных чисел, которые содержатся
  * в переданном массиве. То есть, дубликаты должны быть удалены.
- * 
+ *
 */
 
 function uniq(arr) {
-    // Напишите код здесь
-    let newArr = new Array();
-    arr.forEach(element => {
-        if(!newArr.includes(element)) {
-            newArr.push(element);
-        }
-    });
-    return newArr;
+  // Напишите код здесь
+  const mySet = new Set();
+  arr.forEach((element) => {
+    if (!mySet.has(element)) {
+      mySet.add(element);
+    }
+  });
+  return [...mySet];
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

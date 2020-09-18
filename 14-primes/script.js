@@ -3,21 +3,32 @@
  *
  * Напишите функцию primes(n). Её единственный аргумент — целое число n.
  * Функция должна возвращать массив простых чисел от 2 до n.
- * 
+ *
 */
 
-function primes(num) {
-    // Напишите код здесь
-    let primeNums = new Array();
-    firstForCycle: for(let i = 2; i <= num; i++) {
-        for(let j = 2; j < i; j++) {
-            if(i%j === 0) {
-                continue firstForCycle;
-            }
-        }
-        primeNums.push(i);
+function isPrime(n) {
+  // Напишите код здесь
+  if (n <= 1) {
+    return false;
+  }
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
     }
-    return primeNums;
+  }
+  return true;
+}
+
+function primes(num) {
+  // Напишите код здесь
+  const primeNums = [];
+
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      primeNums.push(i);
+    }
+  }
+  return primeNums;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

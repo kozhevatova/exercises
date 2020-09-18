@@ -6,20 +6,15 @@
  *
 */
 
-
-
 function capitalize(str) {
-    // Напишите код здесь
-    let newStr = "";
-    if (str !== "") {
-        str = str.trim().split(" ");
-        str.forEach((element) => {
-            element = element.charAt(0).toUpperCase() + element.slice(1);
-            newStr += element + " ";
-        })
-    }
+  // Напишите код здесь
+  let newStr = '';
+  if (str !== '') {
+    newStr = str.trim().split(' ').map((element) => element.charAt(0).toUpperCase() + element.slice(1));
+    newStr = newStr.join(' ');
+  }
 
-    return newStr.trim();
+  return newStr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

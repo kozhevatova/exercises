@@ -3,21 +3,21 @@
  *
  * Напишите функцию countZeros(n), принимающую на вход целое неотрицательное
  * число n. Возвращать функция должна количество нулей, содержащихся в аргументе.
- * 
+ *
 */
 
 function countZeros(n) {
-    // Напишите код здесь
-    let count = Math.floor(n / 10);
-    let newNum = n.toString().split('');
-    
-    if(n === 100) {
-        count += Number(newNum[0]);
-    }
-    if (n > 100) {
-        count += Number(newNum[0]) + 9*Number(newNum[0]);
-    }
-    return count;
+  // Напишите код здесь
+  let count = 0;
+  const set = new Set(['0']);
+  for (let i = 1; i <= n; i++) {
+    i.toString().split('').forEach((element) => {
+      if (set.has(element)) {
+        count++;
+      }
+    });
+  }
+  return count;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -1,0 +1,26 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint ./12-count-zeros/script.js",
+    "eslintFix": "eslint --fix ./12-count-zeros/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kozhevatova/exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kozhevatova/exercises/issues"
+  },
+  "homepage": "https://github.com/kozhevatova/exercises#readme",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
